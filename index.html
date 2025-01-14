@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>RentFinder</title>
 </head>
 <body>
     <header>
+        <!-- Main title of application. Contains city and state input boxes with search button -->
         <h1>RentFinder</h1>
-        <input type="text" id="searchInput" placeholder="Enter a city or ZIP">
+        <input type="text" id="cityInput" placeholder="Enter a city">
+        <input type="text" id="stateInput" placeholder="Enter a two-letter state code">
         <button id="searchButton">Search</button>
     </header>
     <main>
+        <!-- Displays results of the search. Handles pagination if necessary -->
         <div id="results"></div>
         <div id="pagination"></div>
     </main>
+    <!-- Links Javascript to main file containging app logic -->
     <script type="module" src="main.js"></script>
 </body>
 </html>
