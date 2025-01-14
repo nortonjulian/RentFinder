@@ -1,5 +1,3 @@
-Main.js
-
 // Import fetchRentals function for API calls and UI functions
 import { fetchRentals } from "./api.js";
 import { displayResults, displayError } from "./ui.js";
@@ -36,4 +34,3 @@ document.getElementById('searchButton').addEventListener('click', async () => {
         displayError("Could not fetch rentals. Please try again.");
     }
 });
-

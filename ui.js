@@ -1,5 +1,4 @@
-Ui.js
-
+// Display Results function
 function displayResults(rentals) {
     //Container element for displaying rental results
     const rentalContainer = document.getElementById('results');
@@ -33,6 +32,7 @@ function displayResults(rentals) {
         // Set the inner HTML of the rental item to display the address with a link
         rentalItem.innerHTML = `
             <p>Address: <a href="${addressUrl}" target="_blank">${rentalAddress}</a></p>
+            <p>Renta</p>
         `;
 
         rentalContainer.appendChild(rentalItem);
@@ -48,5 +48,3 @@ function displayError(message) {
 
 // Export the functions for use in other modules
 export { displayResults, displayError }
-
-
