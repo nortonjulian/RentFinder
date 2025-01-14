@@ -1,0 +1,122 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)
+}
+
+/* Header h1 styling */
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Header input styling */
+header input {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+/* Button hover effect */
+header button:hover {
+    background-color: #0056b3;
+}
+
+/* Main container styling */
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+/* Grid layout for results */
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+}
+
+/* Rental item styling */
+.rental {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform .3s ease, box-shadow .3 ease;
+}
+
+/* Hover effect for rental items */
+.rental:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+}
+
+/* Rental h2 styling */
+.rental h2 {
+    font-size: 1.5rem;
+    margin: 0 0 .5em;
+}
+
+/* Rental item text styling */
+.rental p {
+    margin: .5em 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Error message styling */
+.error {
+    color: #d9534f;
+    font-weight: bold;
+    padding: 1em;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* Pagination styling */
+#pagination {
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+/* Pagination button styling */
+#pagination button {
+    padding: .5em 1em;
+    margin: 0 .25em;
+    font-size: 1rem;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+/* Pagination button hover effect */
+#pagination button:hover {
+    background-color: #45a049;
+}
+
