@@ -5,7 +5,7 @@ const API_KEY = '3f919b6826c148549ff8b1e1500cb721'
 
 //Function to fetch rentl listings with query parameters for city and state
 async function fetchRentals(city, state) {
-    const fullURL = `${API_URL}?city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}&limit=10`;
+    const fullURL = `${API_URL}?city=${encodeURIComponent(city)}&state=${encodeURIComponent(state)}&limit=100`;
 
     //Log the constructed URL for debugging
     console.log(`Fetching URL:`, fullURL);

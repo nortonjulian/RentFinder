@@ -29,10 +29,42 @@ function displayResults(rentals) {
             ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(rental.formattedAddress)}`
             : '#';
 
+        const agentName = rental.listingAgent?.name || "Not provided";
+        const agentPhone = rental.listingAgent?.phone || "Not provided";
+        const agentEmail = rental.listingAgent?.email ? `<a href="mailto:${rental.listingAgent.email}">${rental.listingAgent.email}</a>` : "Not provided"
+        const agentWebsite = rental.listingAgent?.website ? `<a href="${rental.listingAgent.website}" target="_blank">Website</a>` : "Not provided";
+
+        const officeName = rental.listingOffice?.name || "Not provided";
+        const officePhone = rental.listingOffice?.phone || "Not provided";
+
+        const price = rental.price ? `$${rental.price.toLocaleString()}` : "Price not available"
+        const propertyType = rental.propertyType || "Unknown";
+        const squareFootage = rental.squareFootage ? `${rental.squareFootage.toLocaleString()} sq ft` : "Not listed";
+        const yearBuilt = rental.yearBuilt || "Unknown";
+        const county = rental.county || "Unknown";
+        const bedrooms = rental.bedrooms || "N/A";
+        const bathrooms = rental.bathrooms || "N/A";
+
         // Set the inner HTML of the rental item to display the address with a link
         rentalItem.innerHTML = `
             <p>Address: <a href="${addressUrl}" target="_blank">${rentalAddress}</a></p>
-            <p>Renta</p>
+            <p><strong>Price:</strong> ${price}</p>
+            <p><strong>Type:</strong> ${propertyType}</p>
+            <p><strong>Square Footage:</strong> ${squareFootage}</p>
+            <p><strong>Year Built:</strong> ${yearBuilt}</p>
+            <p><strong>County:</strong> ${county}</p>
+            <p><strong>Bedrooms:</strong> ${bedrooms}</p>
+            <p><strong>Bathrooms:</strong> ${bathrooms}</p>
+            <hr>
+            <h4>Listing Agent</h4>
+            <p><strong>Name:</strong> ${agentName}</p>
+            <p><strong>Phone:</strong> ${agentPhone}</p>
+            <p><strong>Email:</strong> ${agentEmail}</p>
+            <p><strong>Website:</strong> ${agentWebsite}</p>
+            <hr>
+            <h4>Listing Office</h4>
+            <p><strong>Name:</strong> ${officeName}</p>
+            <p><strong>Phone:</strong> ${officePhone}</p>
         `;
 
         rentalContainer.appendChild(rentalItem);
