@@ -1,0 +1,1 @@
+RentFinder is a simple, intuitive web application designed to help users find long-term rental listings in any city and state in the United States. By leveraging the RentCast API, RentFinder provides detailed rental information, including property type, price, agent details, and more. The application offers a clean, user-friendly interface for a seamless search experience.
