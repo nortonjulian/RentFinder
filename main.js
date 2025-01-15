@@ -8,7 +8,7 @@ document.getElementById('searchButton').addEventListener('click', async () => {
     const city = document.getElementById('cityInput').value.trim();
     const state = document.getElementById('stateInput').value.trim().toUpperCase();
 
-    // Check s if sity or state is missing
+    // Checks if city or state is missing
     if (!city || !state) {
         console.log("City or state not entered!");
         displayError("Please enter both city and state.");
